@@ -6,3 +6,14 @@ Menu (<a href="{{ site.github.repository_url }}/edit/{{site.git_branch | escape}
   <!-- <li><a href="{{ '/test2' | relative_url }}">A Test</a></li> -->
 </ul>
 {% include breadcrumbs.html %}
+<ul class="breadcrumb">
+    <li><a href="#"><i class="icon-home"></i>Home</a> </li>
+    {% assign crumbs = page.url | split: '/' %}
+    {% assign crumbstotal = crumbs | size %}
+    {% for crumb in crumbs offset:2 %}
+        {% unless crumb == 'index.html' %}
+            <li><span class="divider">&#187;</span> {{ crumb | remove: '.html' }} </li>
+        {% endunless %}
+    {% endfor %}
+</ul>
+                <script>$(".breadcrumb li").last().addClass('active');</script>
