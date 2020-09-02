@@ -4,7 +4,7 @@ title: "MangoMoe's Notes"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
 # with your folder name, otherwise leave it empty
 # baseurl: "/git-wiki-skeleton"
-baseurl: "/notes"
+baseurl: "/"
 # baseurl: ""
 # (string) Description of your wiki
 description: "Trying to make a simple wiki on github pages"
